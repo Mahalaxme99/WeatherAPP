@@ -1,28 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from 'react';
+import { LogBox, Text, TextInput } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from "react-redux";
+import store from "./src/Redux/store";
+import MainStack from './src/Navigation/MainStack';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+export default function App() {
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  LogBox.ignoreLogs(['Warning: ...']);
+  LogBox.ignoreAllLogs();
+
+  if (Text.defaultProps == null) {
+    Text.defaultProps = {};
+    Text.defaultProps.allowFontScaling = false;
+  }
+
+  if (TextInput.defaultProps == null) {
+    TextInput.defaultProps = {};
+    TextInput.defaultProps.allowFontScaling = false;
+  }
+  console.disableYellowBox = true;
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <Provider store={store}>
+      <NavigationContainer >
+        <MainStack />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
