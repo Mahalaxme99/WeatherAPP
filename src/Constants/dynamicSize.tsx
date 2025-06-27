@@ -5,7 +5,7 @@ export const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } =
 const ScaleHeight = SCREEN_HEIGHT / 850;
 const ScaleWidth = SCREEN_WIDTH / 395;
 
-export function normalizeFont(size) {
+export function normalizeFont(size:number) {
   const newSize = size ;
   if (Platform.OS === 'ios') {
     return Math.round(PixelRatio.roundToNearestPixel(newSize));
@@ -14,6 +14,6 @@ export function normalizeFont(size) {
   } 
 }
 
-export const scaleHeight = (height) => Math.round(height * ScaleHeight);
+export const scaleHeight = (height:number) => Math.round(height * ScaleHeight);
 
-export const scaleWidth = (width) => Math.round(width * ScaleWidth);
+export const scaleWidth = (width:number) => Math.round(width * ScaleWidth);
