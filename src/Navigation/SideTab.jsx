@@ -4,11 +4,11 @@ import CustomSidebarMenu from './CustomSidebarMenu';
 import { scaleWidth } from '../Constants/dynamicSize';
 import DrawerWrapper from './DrawerWrapper';
 import { useSelector } from "react-redux";
+import { COLORS } from '../Constants/colors';
 
 const Drawer = createDrawerNavigator();
 const SideTab = ({ route }) => {
   const fromOTP = route?.params?.fromOTP;
-  const menucolor = useSelector(state => state.detailSlice.menuBackground);
   return (
     <Drawer.Navigator
       screenOptions={{
@@ -18,11 +18,11 @@ const SideTab = ({ route }) => {
         drawerInactiveBackgroundColor: 'transparent',
         overlayColor: 'transparent',
         drawerStyle: {
-          backgroundColor: menucolor,
+          backgroundColor: COLORS.WHITE,
           width: scaleWidth(290),
         },
         sceneContainerStyle: {
-          backgroundColor: menucolor,
+          backgroundColor: COLORS.WHITE,
         }
       }}
       drawerContent={(props) => <CustomSidebarMenu {...props} />}>

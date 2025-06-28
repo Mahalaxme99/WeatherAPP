@@ -48,5 +48,5 @@ export const COLORS = {
     GREENA:'#9fd482',
     ORANGE: '#ffb343',
     CANARY: '#FFFF99',
-    NEW_GREEN: '#095D5F'
+    NEW_GREEN: '#095D5F',
 }

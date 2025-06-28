@@ -1,5 +1,4 @@
 import { StyleSheet,Platform} from 'react-native';
-import { FONTS } from '../Constants/fonts';
 import { COLORS } from '../Constants/colors';
 import { scaleHeight, normalizeFont, scaleWidth } from '../Constants/dynamicSize';
 
@@ -12,14 +11,12 @@ export const styles = StyleSheet.create({
     fontSize: normalizeFont(18),
     fontWeight: '700',
     color: COLORS.BLACK,
-    fontFamily: FONTS.NUNITOSANSMEDIUM,
     marginLeft: scaleWidth(10)
   },
   language: {
     textAlign: 'left',
     fontSize: normalizeFont(18),
     color: COLORS.BLACK,
-    fontFamily: FONTS.NUNITOSANSMEDIUM,
   },
   logoutimage: {
     height: scaleHeight(40),
@@ -45,7 +42,6 @@ export const styles = StyleSheet.create({
     color: COLORS.WHITE,
     fontSize: normalizeFont(18),
     fontWeight: '700',
-    fontFamily: FONTS.NUNITOSANSBOLD
   },
   generalcardsubtitle: {
     color: COLORS.WHITE,
@@ -53,7 +49,6 @@ export const styles = StyleSheet.create({
     fontWeight: '500',
     marginLeft: scaleWidth(2),
     marginTop: scaleHeight(5),
-    fontFamily: FONTS.NUNITOSANSREGULAR
   },
   positiontitle: {
     flex: 1,
@@ -76,7 +71,6 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: normalizeFont(18),
     paddingVertical: scaleHeight(10),
-    fontFamily: FONTS.NUNITOSANSMEDIUM,
     width: scaleWidth(250),
   },
   group: {
@@ -85,7 +79,6 @@ export const styles = StyleSheet.create({
     marginLeft: scaleWidth(20),
     textTransform: 'uppercase',
     textDecorationLine: 'underline',
-    fontFamily: FONTS.NUNITOSANSBOLD,
     fontWeight: 'bold',
     marginVertical: scaleHeight(10)
   },
@@ -93,7 +86,6 @@ export const styles = StyleSheet.create({
     fontSize: normalizeFont(18),
     fontWeight: '600',
     paddingVertical: scaleHeight(10),
-    fontFamily: FONTS.NUNITOSANSMEDIUM,
     width: scaleWidth(140),
     textAlign: 'left'
 
@@ -105,7 +97,6 @@ export const styles = StyleSheet.create({
   subsubtitle: {
     fontSize: normalizeFont(16),
     paddingVertical: scaleHeight(10),
-    fontFamily: FONTS.NUNITOSANSMEDIUM
   },
   icon: {
     flexDirection: 'row',
@@ -156,8 +147,7 @@ export const styles = StyleSheet.create({
     color: COLORS.GREEN,
     fontSize: normalizeFont(16),
     textAlign: 'center',
-    marginLeft: scaleWidth(8),
-    fontFamily: FONTS.NUNITOSANSBOLD
+    marginLeft: scaleWidth(8)
   },
   closeview: {
     marginLeft: scaleWidth(15),
@@ -209,7 +199,6 @@ export const styles = StyleSheet.create({
   },
   saveText: {
     color: COLORS.WHITE,
-    fontFamily: FONTS.NUNITOSANSMEDIUM,
     fontSize: normalizeFont(16),
     fontWeight: '600',
   },
